@@ -1,0 +1,14 @@
+.expensesList {
+    margin-top: 2rem;
+    div {
+        display: flex;
+        gap: 1rem;
+        padding-bottom: .75rem;
+        span {
+            flex: 1;
+        }
+    }
+    p {
+        font-weight: bold;
+    }
+}

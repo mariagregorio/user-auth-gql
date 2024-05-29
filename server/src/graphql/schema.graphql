@@ -1,0 +1,43 @@
+type User {
+    id: ID!
+    username: String
+    email: String
+    password: String
+    token: String
+}
+
+input RegisterInput {
+    username: String!
+    email: String!
+    password: String!
+}
+
+input LoginInput {
+    email: String!
+    password: String!
+}
+
+type Expense {
+    id: ID!
+    amount: Float
+    description: String
+    date: String
+    ownerId: String
+}
+
+input ExpenseInput {
+    amount: Float!
+    description: String!
+    date: String!
+}
+
+type Query {
+    user(id: ID!): User
+    expenses: [Expense]
+}
+
+type Mutation {
+    registerUser(registerInput: RegisterInput!): User
+    loginUser(loginInput: LoginInput!): User
+    createExpense(expenseInput: ExpenseInput!): Expense
+}

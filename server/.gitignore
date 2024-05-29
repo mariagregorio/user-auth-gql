@@ -1,0 +1,6 @@
+.env
+package-lock.json
+
+src/generated
+dist
+node_modules
